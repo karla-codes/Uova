@@ -1,4 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Lateef&display=swap");
+
+// mini reset
+html {
+  margin: 0;
+  padding: 0;
+
+  h1,
+  h2,
+  h3,
+  p {
+    font-size: inherit;
+    margin: 0;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
 body {
-  font-family: sans-serif;
-  background-color: #f9f9f9;
+  font-family: "Lateef", sans-serif;
+  font-size: 18px;
+  line-height: 1.25;
+  color: #1f2839;
+  background-color: #f9f0de;
+  margin: 0 0 0 25%;
+}
+
+section {
+  &.chicken {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25%;
+    height: 100%;
+    // background-color: red;
+    background-image: url(../assets/sidebar.jpg);
+    background-size: cover;
+    background-position: 80% 50%;
+  }
+}
+
+main {
+  padding: 80px;
+  width: min(960px, 100%);
+  margin: 0 auto;
+
+  h1 {
+    font-size: 144px;
+    line-height: 1;
+    font-weight: 400;
+    border-bottom: 1px solid #c2beb5;
+    text-transform: uppercase;
+  }
+
+  article {
+    &.grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px 32px;
+      margin: 60px 0;
+    }
+
+    .item {
+      .title {
+        display: flex;
+        justify-content: space-between;
+        font-size: 24px;
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-between;
+  }
 }
